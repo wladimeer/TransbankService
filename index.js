@@ -3,7 +3,7 @@ const Transbank = require('transbank-sdk').WebpayPlus;
 
 const app = Express();
 app.set('port', process.env.PORT || 3000);
-app.use(json());
+app.use(Express.json());
 
 app.all('/', (request, response, next) => {
   next();
