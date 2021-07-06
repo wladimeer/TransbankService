@@ -1,5 +1,5 @@
-import Express, { json } from 'express';
-import { WebpayPlus as Transbank } from 'transbank-sdk';
+const Express = require('express');
+const Transbank = require('transbank-sdk').WebpayPlus;
 
 const app = Express();
 app.set('port', process.env.PORT || 3000);
