@@ -33,19 +33,19 @@ app.post('/status', (request, response) => {
         case 'TSY':
           CommitTransaction(token)
             .then((value) => {
-              response.json(value);
+              response.json({ success: value });
             })
             .catch((value) => {
-              response.json(value);
+              response.json({ error: value });
             });
           break;
         case 'TSN':
-          response.json('El Pago no Pudo Ser Completado!');
+          response.json({ error: 'El Pago no Pudo Ser Completado!' });
           break;
       }
     })
     .catch((value) => {
-      response.json('Hubo un Error al Realizar el Pago!');
+      response.json({ error: 'Hubo un Error al Realizar el Pago!' });
     });
 });
 
