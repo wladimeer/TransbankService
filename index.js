@@ -12,7 +12,7 @@ app.all('/', (request, response, next) => {
 app.post('/create', (request, response) => {
   const purchase = request.body.purchase;
   // response.send(purchase);
-  response.json(purchase);
+  response.json({ name: 'purchase' });
 });
 
 app.listen(app.get('port'), () => {
