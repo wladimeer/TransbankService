@@ -26,7 +26,7 @@ app.post('/create', (request, response) => {
   //     response.send(response);
   //   });
 
-  response.send(a);
+  response.json(a);
   // response.json({ name: 'purchase' });
 });
 
