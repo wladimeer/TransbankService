@@ -11,7 +11,7 @@ app.all('/', (request, response, next) => {
 
 app.post('/create', (request, response) => {
   const purchase = request.body.purchase;
-  const a = JSON.parse(request.body.purchase);
+  const a = request.body.purchase.totalPrice;
 
   // let buyOrder = `O${String(Math.floor(Math.random() * 9999999))}`;
   // let sessionId = `S${String(Math.floor(Math.random() * 9999999))}`;
