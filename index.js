@@ -10,8 +10,9 @@ app.all('/', (request, response, next) => {
 });
 
 app.post('/create', (request, response) => {
-  console.log(request.body.purchase.totalPrice);
-  response.send('ready!');
+  const data = request.body.purchase;
+  console.log(data);
+  response.send('ready! ', data);
 });
 
 app.listen(app.get('port'), () => {
