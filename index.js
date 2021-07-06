@@ -11,7 +11,21 @@ app.all('/', (request, response, next) => {
 
 app.post('/create', (request, response) => {
   const purchase = request.body.purchase;
-  response.send(purchase);
+
+  // let buyOrder = `O${String(Math.floor(Math.random() * 9999999))}`;
+  // let sessionId = `S${String(Math.floor(Math.random() * 9999999))}`;
+  // let amount = request.body.purchase.totalPrice;
+  // let returnUrl = 'https://www.google.com';
+
+  // Transbank.Transaction.create(buyOrder, sessionId, amount, returnUrl)
+  //   .then((response) => {
+  //     response.send(response);
+  //   })
+  //   .catch((response) => {
+  //     response.send(response);
+  //   });
+
+  response.send(purchase.totalPrice);
   // response.json({ name: 'purchase' });
 });
 
