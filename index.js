@@ -5,9 +5,9 @@ const app = Express();
 app.set('port', process.env.PORT || 3000);
 app.use(json());
 
-// app.all('/', (request, response, next) => {
-//   next();
-// });
+app.all('/', (request, response, next) => {
+  next();
+});
 
 app.post('/create', (request, response) => {
   let buyOrder = `O${String(Math.floor(Math.random() * 9999999))}`;
